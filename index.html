@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#ecefec">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>Colares do Forró</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: consulta de bolso — seletor de colar fixo no topo, cartão de destaque na cor do colar, depois passos, combinações e exame em cartões brancos arredondados sobre fundo cinza claro */
+:root{
+  --bg:#ecefec; --card:#ffffff; --fg:#141715; --muted:#69706b; --line:#e3e7e3; --chip:#f2f4f2;
+  --sun:#f6e08f; --mint:#d5ebc2; --sky:#bde3ee; --coral:#f2a98f;
+  --on:#141715; --on-muted:#3f4741; --dot:#141715;
+  --font:"Onest",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r-lg:28px; --r:20px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#101211; --card:#1b1e1c; --fg:#eef1ee; --muted:#9aa29c; --line:#2a2f2b; --chip:#242825;
+  --sun:#4b4220; --mint:#2e4128; --sky:#203f48; --coral:#53302a;
+  --on:#f1f3f1; --on-muted:#c9d0ca; --dot:#eef1ee; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#101211; --card:#1b1e1c; --fg:#eef1ee; --muted:#9aa29c; --line:#2a2f2b; --chip:#242825;
+  --sun:#4b4220; --mint:#2e4128; --sky:#203f48; --coral:#53302a;
+  --on:#f1f3f1; --on-muted:#c9d0ca; --dot:#eef1ee; color-scheme:dark}
+.t-glass{--tone:#eef3f4;--tone-edge:rgba(255,255,255,.95);--on-t:#141715;--on-t-muted:#4a524c;--t-chip:rgba(255,255,255,.72);--t-pill:#e4edef;--ck:#141715;--ck-on:#ffffff;
+  --blob1:rgba(140,200,218,.8);--blob2:rgba(238,196,180,.65);--blob3:rgba(196,226,204,.65);--frost:rgba(255,255,255,.36);--sheen:rgba(255,255,255,.75)}
+.t-white{--tone:#ffffff;--tone-edge:#dfe3df;--on-t:#141715;--on-t-muted:#4a524c;--t-chip:#f0f2f0;--t-pill:#eef0ee;--ck:#141715;--ck-on:#ffffff}
+.t-sky{--tone:#bde3ee;--tone-edge:#bde3ee;--on-t:#141715;--on-t-muted:#3f4741;--t-chip:rgba(255,255,255,.65);--t-pill:#bde3ee;--ck:#2f9fd0;--ck-on:#ffffff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .t-glass{--tone:#1a1f21;--tone-edge:rgba(255,255,255,.16);--on-t:#eef1ee;--on-t-muted:#b9c2bc;--t-chip:rgba(255,255,255,.09);--t-pill:#283034;--ck:#eef1ee;--ck-on:#141715;--blob1:rgba(90,160,180,.35);--blob2:rgba(190,130,110,.28);--blob3:rgba(120,170,135,.25);--frost:rgba(255,255,255,.05);--sheen:rgba(255,255,255,.12)}
+ :root:not([data-theme="light"]) .t-white{--tone:#f1f3f1;--tone-edge:#f1f3f1;--on-t:#141715;--on-t-muted:#4a524c;--t-chip:#e1e5e1;--t-pill:#2c302d;--ck:#f1f3f1;--ck-on:#141715}
+ :root:not([data-theme="light"]) .t-sky{--tone:#203f48;--tone-edge:#203f48;--on-t:#f1f3f1;--on-t-muted:#c9d0ca;--t-chip:rgba(0,0,0,.25);--t-pill:#203f48;--ck:#4fb6e8;--ck-on:#0e1a1e}}
+:root[data-theme="dark"] .t-glass{--tone:#1a1f21;--tone-edge:rgba(255,255,255,.16);--on-t:#eef1ee;--on-t-muted:#b9c2bc;--t-chip:rgba(255,255,255,.09);--t-pill:#283034;--ck:#eef1ee;--ck-on:#141715;--blob1:rgba(90,160,180,.35);--blob2:rgba(190,130,110,.28);--blob3:rgba(120,170,135,.25);--frost:rgba(255,255,255,.05);--sheen:rgba(255,255,255,.12)}
+:root[data-theme="dark"] .t-white{--tone:#f1f3f1;--tone-edge:#f1f3f1;--on-t:#141715;--on-t-muted:#4a524c;--t-chip:#e1e5e1;--t-pill:#2c302d;--ck:#f1f3f1;--ck-on:#141715}
+:root[data-theme="dark"] .t-sky{--tone:#203f48;--tone-edge:#203f48;--on-t:#f1f3f1;--on-t-muted:#c9d0ca;--t-chip:rgba(0,0,0,.25);--t-pill:#203f48;--ck:#4fb6e8;--ck-on:#0e1a1e}
+.toned{background:var(--tone);color:var(--on-t);border:1px solid var(--tone-edge);position:relative;isolation:isolate;overflow:hidden}
+.t-white .toned{box-shadow:0 1px 2px rgba(20,23,21,.06),0 10px 28px rgba(20,23,21,.06)}
+.t-glass .toned{box-shadow:inset 0 1px 0 var(--sheen),0 10px 30px rgba(20,40,45,.08)}
+.t-glass .toned::before{content:"";position:absolute;inset:-20%;z-index:-2;background:radial-gradient(circle at 18% 22%,var(--blob1),transparent 38%),radial-gradient(circle at 88% 86%,var(--blob2),transparent 36%),radial-gradient(circle at 70% 8%,var(--blob3),transparent 32%);filter:blur(10px)}
+.t-glass .toned::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(125deg,var(--sheen) 0%,transparent 34%),var(--frost)}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:16px/1.5 var(--font);-webkit-text-size-adjust:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+h1,h2,h3{margin:0;font-weight:600;line-height:1.12;text-wrap:balance;letter-spacing:-.015em}
+p{margin:0}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--fg);outline-offset:2px;border-radius:12px}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+header.top{padding-block:18px 6px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .av{width:46px;height:46px;border-radius:50%;background:var(--card);display:grid;place-items:center;flex:none}
+.brand b{display:block;font-weight:600;font-size:1.02rem}
+.brand span{font-size:.84rem;color:var(--muted)}
+
+.switch{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px}
+.seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;background:var(--card);border-radius:26px;padding:6px}
+.seg button{border:0;background:transparent;border-radius:20px;min-height:60px;padding:7px 4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-weight:600;font-size:.86rem;cursor:pointer;color:var(--muted);white-space:nowrap;transition:background .15s,color .15s}
+.seg button:hover{background:var(--chip)}
+.seg button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+.seg svg{flex:none}
+
+main{padding-block:8px 48px;display:flex;flex-direction:column;gap:22px}
+.hero{border-radius:var(--r-lg);padding:20px;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center}
+.hero .pill{background:var(--t-chip);color:var(--on-t)}
+.hero h1{font-size:clamp(1.9rem,7vw,2.5rem);margin-top:10px}
+.hero .word{color:var(--on-t-muted);font-weight:500;margin-top:4px}
+.photo{width:104px;aspect-ratio:3/4;border-radius:20px;object-fit:cover;max-width:100%;background:var(--card);display:block}
+.photo.fallback{display:grid;place-items:center}
+
+
+.sec{display:flex;flex-direction:column;gap:12px;scroll-margin-top:84px}
+.sec>header{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-inline:4px}
+.sec h2{font-size:1.45rem}
+.sub{font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-inline:4px;margin-top:4px}
+.src{font-size:.8rem;color:var(--muted)}
+
+.card{background:var(--card);border-radius:var(--r);overflow:hidden}
+.step{display:grid;grid-template-columns:30px 1fr;gap:12px;padding:14px 16px;border-top:1px solid var(--line);cursor:pointer}
+.ck{appearance:none;-webkit-appearance:none;width:28px;height:28px;margin:0;border-radius:50%;border:2px solid var(--line);background:var(--card);display:grid;place-items:center;cursor:pointer;transition:background .15s}
+.ck::after{content:"";width:9px;height:14px;border:solid transparent;border-width:0 3px 3px 0;transform:translateY(-2px) rotate(45deg)}
+.ck:checked{background:var(--ck);border-color:var(--ck)}
+.ck:checked::after{border-color:var(--ck-on)}
+.step.done .name{text-decoration:none}
+.prog{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.86rem;color:var(--on-t-muted)}
+.prog b{color:var(--on-t);font-variant-numeric:tabular-nums}
+.meter{flex:1;max-width:160px;height:8px;border-radius:99px;background:var(--t-chip);overflow:hidden;box-shadow:inset 0 0 0 1px var(--tone-edge)}
+.meter i{display:block;height:100%;background:var(--on-t);border-radius:99px;transition:width .2s}
+.step:first-child{border-top:0}
+.num{width:30px;height:30px;border-radius:50%;background:var(--chip);display:grid;place-items:center;font-size:.82rem;font-weight:600;font-variant-numeric:tabular-nums}
+.step .head{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px}
+.step .name{font-weight:600;font-size:1.02rem}
+.step .desc{color:var(--muted);font-size:.93rem;margin-top:3px}
+.vars{margin:8px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+.vars li{font-size:.88rem;background:var(--chip);border-radius:12px;padding:7px 10px}
+.vars li b{font-weight:600}
+
+.pill{display:inline-flex;align-items:center;gap:5px;font-size:.76rem;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--chip);color:var(--fg);white-space:nowrap}
+.pill.tone{background:var(--t-pill);color:var(--fg)}
+.pill.warn{background:var(--coral);color:var(--on)}
+.dots{display:inline-flex;gap:3px;align-items:center}
+.dots i{width:6px;height:6px;border-radius:50%;background:var(--dot);display:block}
+.dots em{font-style:normal;padding:0 2px}
+
+.combo{display:grid;grid-template-columns:34px 1fr;gap:12px;padding:14px 16px;border-top:1px solid var(--line)}
+.combo:first-child{border-top:0}
+.seq{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.seq .c{background:var(--chip);border-radius:12px;padding:6px 10px;font-size:.9rem;font-weight:500}
+.seq .arr{color:var(--muted);font-size:.85rem}
+.empty{background:var(--card);border-radius:var(--r);padding:18px;color:var(--muted);font-size:.93rem}
+
+.obs{display:flex;flex-direction:column;gap:8px}
+.obs div{background:var(--card);border-radius:16px;padding:12px 14px;font-size:.92rem;display:flex;gap:10px}
+.obs svg{flex:none;margin-top:3px;color:var(--muted)}
+
+.exhead{border-radius:var(--r-lg);padding:18px 20px;display:flex;flex-direction:column;gap:12px}
+.exhead .route{display:flex;align-items:center;gap:8px;font-weight:600}
+.exhead h3{font-size:1.3rem}
+.meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.meta div{background:var(--t-chip);border-radius:14px;padding:10px 12px;font-size:.86rem;color:var(--on-t)}
+.meta span{display:block;font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--on-t-muted)}
+@media (max-width:420px){.meta{grid-template-columns:1fr}}
+.crit{display:grid;grid-template-columns:10px 1fr;gap:12px;padding:13px 16px;border-top:1px solid var(--line)}
+.crit:first-child{border-top:0}
+.crit .bul{width:8px;height:8px;border-radius:50%;background:var(--ck);margin-top:8px}
+.crit b{font-weight:600}
+.crit p{color:var(--muted);font-size:.92rem;white-space:pre-line}
+.note{background:var(--card);border-radius:16px;padding:12px 14px;font-size:.9rem;border-left:0;display:flex;gap:10px}
+.note b{font-weight:600}
+footer{color:var(--muted);font-size:.8rem;text-align:center;padding-top:6px}
+@media (prefers-reduced-motion:no-preference){main{animation:in .25s ease-out}@keyframes in{from{opacity:.4;transform:translateY(6px)}}}
+</style>
+
+<header class="top wrap">
+  <div class="brand"><span class="av" id="av"></span><div><b>Colares</b><span>Consulta para treinar</span></div></div>
+</header>
+<div class="switch"><div class="wrap"><div class="seg" id="seg" role="group" aria-label="Escolher colar"></div></div></div>
+<main class="wrap" id="main"></main>
+
+<script>
+"use strict";
+const DATA = [{"id": "transparente", "nome": "Transparente", "sub": "Base", "palavra": "Humildade", "tema": "glass", "fam": "transparente", "foto": "6753d3785e641648a95cf21cd67ea9fd", "fechados": [{"nome": "Passo Básico", "desc": "A base do abraço e marcação do ritmo."}, {"nome": "Repetição de Perna", "desc": "Variação de mola/massa no passo fechado."}, {"nome": "Caminhada", "desc": "Deslocamento mantendo a condução fechada."}, {"nome": "Giro Junto", "desc": "Giro simultâneo mantendo o abraço."}], "abertos": [{"nome": "Abertura", "desc": "Transição do fechado para o aberto."}, {"nome": "Ciclo", "desc": "Dinâmica contínua de troca de lado no aberto."}, {"nome": "Quebra de Braço (1 e 2 mãos)", "desc": "Condução com alavanca para baixo no braço da conduzida."}, {"nome": "Chuveirinho", "desc": "Ciclo básico da conduzida passando a mão por cima."}, {"nome": "Penteado", "desc": "Mão do condutor passa pelo cabelo/cabeça e inverte as mãos."}, {"nome": "Avião (Conduzido e Condutor)", "desc": "Projeção de braço em rotação."}, {"nome": "Gaiola", "desc": "Enquadramento com braços cruzados/elevados para envolver e conduzir a par no espaço."}], "combos": [], "obs": [], "exame": {"titulo": "Transparente para Branca", "para": "Branca", "freq": "A cada 45 dias, em cada unidade", "tempo": "30 a 45 dias de cronograma (recomendado)", "grupos": [{"nome": "Critérios", "itens": [{"nome": "Ritmo", "descricao": "Pisadas em 1, 2, 3 (é exigida uma noção e um certo padrão; saídas pontuais podem acontecer)."}, {"nome": "Marcação", "descricao": "Apresentar domínio de transferência de peso e das marcações básicas (à frente e atrás / abre, pisa e volta)."}, {"nome": "Repertório", "descricao": "Fazer os movimentos básicos da roda → caminhada e gira junto, chuveirinho, quebra de braço, ciclo e variações, aviãozinho."}, {"nome": "Contato", "descricao": "Noção de contato no básico, caminhada, giro junto (funcionar!)."}]}], "avisos": ["Não é obrigatório fazer todos os movimentos. É interessante mostrar o conhecimento dos diferentes recursos e o que aprendeu na roda."]}}, {"id": "branca", "nome": "Branca", "sub": "", "palavra": "Despertar", "tema": "white", "fam": "branca", "foto": "3c8b1447b0c2455ce21f8c8985c0f0af", "fechados": [{"nome": "Facão", "desc": "Troca de lado para trás em 180°.", "pis": "3 + 3"}, {"nome": "Abre Estranho 1", "desc": "Troca de lado de 180°.", "pis": "3"}, {"nome": "Paulista", "desc": "Condutor solta a conduzida para giro de 3 pisadas.", "pis": "3"}, {"nome": "Chapéu", "desc": "Conduzida dá a volta no condutor marcando 3 + 3 pisadas.", "pis": "3 + 3", "vars": ["Antes de completar a volta, ir direto para o Panamericano."]}], "abertos": [{"nome": "Manivela (1 e 2 mãos)", "desc": "O condutor joga a mão direita para cima cruzando os braços, dando as costas para a conduzida, e volta em direção ao ombro esquerdo.", "pis": "5"}, {"nome": "Giro de 5 Pisadas", "desc": "Ciclo + giro da conduzida.", "pis": "5"}, {"nome": "Panamericano", "desc": "Giro em linha reta com estrutura de 5 pisadas.", "pis": "5"}, {"nome": "Vôlei", "desc": "Mesma mecânica do Panamericano, guiado pela lateral do braço direito.", "pis": "5"}, {"nome": "Giro do Condutor", "desc": "Seu giro próprio no aberto.", "vars": ["Giro por trás com a mão por cima", "Aviãozinho", "Troca de mão"]}, {"nome": "Costas com Costas", "desc": "Troca de lado executada após a trava do Quebra de Braço (e suas variações)."}, {"nome": "Ninja", "desc": "Condutor empurra o braço da conduzida, que gira em linha; o condutor volta para buscar a conduzida.", "pis": "5"}], "combos": [{"grupo": "", "lista": [["Caminhada", "Giro junto", "Paulista"], ["Chapéu", "Meio abre estranho", "Panamericano"], ["Vôlei", "Aviãozinho na conduzida", "Ciclo", "Gaiola"], ["Facão", "Abre estranho 1", "Panamericano"], ["Ninja", "Ciclo", "Panamericano", "Ciclo", "Manivela"], ["Panamericano", "Ciclo", "Manivela de uma mão"], ["Giro junto", "Paulista", "Manivela de uma mão"], ["Chapéu", "Costas com costas", "Panamericano"], ["Facão (duas vezes)", "Abre estranho 1", "Passo básico", "Chapéu", "Caminhada", "Giro junto", "Paulista"], ["Costas com costas normal", "Costas com costas com a mão esquerda", "Costas com costas trocando de mão (esquerda para a direita)"], ["Ninja", "Manivela 1 mão", "Manivela 2 mãos"], ["Giro de 5 pisadas", "Giro do condutor"], ["Chapéu", "Caminhada"]]}], "obs": ["Portinha ou Penteado: na roda branca esse passo é feito com troca de lado.", "Caminhada: é para frente, e não na diagonal."], "exame": {"titulo": "Branca para Azul", "para": "Azul", "freq": "Exame unificado em BH, a cada 3 meses", "tempo": "30 a 45 dias de cronograma (recomendado)", "grupos": [{"nome": "Critérios", "itens": [{"nome": "Ritmo", "descricao": "Pisadas em 1, 2, 3 e 1-5 (ritmo mais consolidado)."}, {"nome": "Marcação", "descricao": "Apresentar domínio de transferência de peso e das marcações básicas (à frente e atrás / abre, pisa e volta)."}, {"nome": "Repertório", "descricao": "Fazer os movimentos básicos da roda → caminhada, gira junto e solto, 5 pisadas, costas com costas, gira por trás."}, {"nome": "Contato", "descricao": "Noção de contato no básico, caminhada, giro junto (funcionar!)."}]}], "avisos": ["Não é obrigatório fazer todos os movimentos. É interessante mostrar o conhecimento dos diferentes recursos e o que aprendeu na roda."]}}, {"id": "azul", "nome": "Azul Iniciante", "sub": "", "palavra": "Vontade", "tema": "sky", "fam": "azul", "foto": "ded25115f8ec9ef6dfa3cab45663d27d", "fechados": [{"nome": "Giro Junto para Frente", "desc": "Giro junto, mas o condutor começa com a perna esquerda indo à frente."}, {"nome": "Giro Junto de 5 Pisadas", "desc": "Tanto à frente quanto atrás. Dá para estender as pisadas.", "pis": "5"}, {"nome": "Xique-xique Circular", "desc": "Movimento circular do quadril."}, {"nome": "Adocica", "desc": "Movimento do quadril em U para as laterais."}, {"nome": "Soluço", "desc": "Repetição do passo básico à frente ou atrás, em três pisadas.", "pis": "3"}, {"nome": "Variações da Caminhada", "desc": "Conduzida fechando o abraço, ou o abraço não fecha, podendo fazer variações do passo básico lado a lado. Feita para frente."}, {"nome": "Abriu Estranho 3", "desc": "Condutor se desloca para a esquerda da conduzida, abrindo espaço.", "pis": "5", "vars": ["Transição de dança fechada para dança aberta."]}], "abertos": [{"nome": "Finta", "desc": "Condutor passa o braço direito pela cabeça e tira enquanto pivoteia."}, {"nome": "Puxadinha", "desc": "Condutor anda para trás enquanto puxa o braço esquerdo."}, {"nome": "Laço", "desc": "Desenho similar à manivela de uma mão, mas o movimento é feito com a mão direita do condutor e a mão esquerda da conduzida. É importante ter contato de corpo/tronco durante o movimento."}, {"nome": "Chanel", "desc": "Começando do chuveirinho, o condutor troca a mão direita com a mão esquerda e faz um giro por trás."}, {"nome": "Chicote", "desc": "Começa com uma troca de lado com as mãos invertidas e faz uma puxadinha com a direita.", "pend": "Descrição a confirmar"}, {"nome": "Giro por Trás com as Duas Mãos", "desc": "Iniciar o giro por trás com a mão esquerda e conectar com as duas mãos.", "vars": ["Saída: manter as mãos juntas até o fim do giro, permitindo uma troca de lado.", "Saída: não finalizar o giro, terminando de costas para a conduzida, e usar a puxadinha para voltar a conduzida de frente (precisa ter um giro)."], "pend": "Nome a confirmar: também chamado de manivela invertida?"}, {"nome": "Abriu Estranho 3", "desc": "Condutor se desloca para a esquerda da conduzida, abrindo espaço.", "pis": "5"}, {"nome": "Enceradeira", "desc": "Começa no chuveirinho. Na volta, o condutor coloca mais energia para transformar em 5 pisadas e circula a conduzida. Funciona na ida e na volta.", "pis": "5"}, {"nome": "Trocadilho", "desc": "Parecido com o Abriu Estranho 3."}, {"nome": "Lançamento", "desc": "Durante o Abriu Estranho 2, o condutor coloca energia “lançando” as mãos da conduzida, transformando num movimento de 5 pisadas.", "pis": "5"}, {"nome": "Banana-Banana", "desc": "Entrando como se fosse um chuveirinho, o condutor gira por trás desenhando o gesto de “banana” na conduzida, depois em si mesmo, e desenrola."}], "combos": [{"grupo": "No fechado", "lista": [["Facão", "Giro para frente"], ["Giro junto de 5 pisadas", "Repetição de perna", "Facão"], ["Meio passo básico", "Xique-xique circular", "Adocica", "Passo básico"], ["Caminhada sem fechar abraço", "Variações do passo básico", "Abriu estranho 1"]]}, {"grupo": "No aberto", "lista": [["Ciclo", "Finta", "Giro do condutor", "Puxadinha"], ["Ciclo", "Giro de costas com aviãozinho", "Laço"], ["Chuveirinho", "Chanel", "Ciclo (mão cruzada)", "Penteado"], ["Banana-Banana", "Chuveirinho", "Chanel", "Puxadinha do chanel"]]}], "obs": [], "exame": {"titulo": "Azul para Azul Intermediária", "para": "Azul Intermediária", "freq": "Exame unificado em BH, a cada 3 meses", "tempo": "3 meses na Azul Iniciante", "grupos": [{"nome": "Condução / Resposta", "itens": [{"nome": "Desenho", "descricao": "Uso das articulações permitindo dobrar e esticar os braços quando necessário. Clareza dos movimentos feitos."}, {"nome": "Força", "descricao": "Uso de força desnecessária nos movimentos."}, {"nome": "Sustentação", "descricao": "Ser responsável pela sustentação do próprio braço."}, {"nome": "Timming", "descricao": "Momento correto da condução. Geralmente mais gradual e não pontual."}]}, {"nome": "Desenvoltura", "itens": [{"nome": "Ritmo", "descricao": "Bem consolidado tanto 3 quanto 5 pisadas."}, {"nome": "Marcação", "descricao": "Bem consolidada, incluindo formatos e potencializando deslocamentos."}, {"nome": "Repertório", "descricao": "Fazer os movimentos básicos da roda → abriu estranhos, giros por trás (condutores) e giros em linha (conduzidos) → facão e xique-xique."}, {"nome": "Encadeamento", "descricao": "Desenvoltura, fluidez, sequências."}, {"nome": "Autonomia", "descricao": "Capacidade de executar os movimentos com precisão e independência e não apenas “se deixar fazer” — relacionado à presença, não a propostas, intervenções ou criatividade."}]}, {"nome": "Deslocamento", "itens": [{"nome": "Giro em linha", "descricao": ""}, {"nome": "Giro por trás", "descricao": ""}, {"nome": "Troca de lado", "descricao": "Abertura e ocupação de espaços criando fluxo na dança."}, {"nome": "Referência", "descricao": "É uma técnica utilizada que facilita e potencializa recursos como noção de espaço, conexão e interação com o par, entre outros."}]}], "avisos": ["Nenhum movimento é obrigatório e/ou eliminatório caso não realizado. O aluno precisa mostrar domínio do conteúdo da roda de forma geral."]}}];
+const $ = s => document.querySelector(s);
+const h = v => String(v ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+function tag(fam, w){
+  const f = {transparente:"none",branca:"#ffffff",azul:"#4fb6e8"}[fam] || "none";
+  return `<svg width="${w}" viewBox="0 0 40 60" aria-hidden="true"><path d="M20 0v6" stroke="#3a3a3a" stroke-width="2"/><rect x="4" y="5" width="32" height="52" rx="5" fill="#e1aa55" stroke="#9a6624" stroke-width="1.5"/><g fill="${f}" stroke="#5b3a12" stroke-width="1.3"><ellipse cx="13.5" cy="17" rx="3.1" ry="3.6"/><ellipse cx="18.8" cy="14.2" rx="2.3" ry="2.7"/><ellipse cx="23.2" cy="13.6" rx="2" ry="2.4"/><ellipse cx="27.2" cy="14.8" rx="1.8" ry="2.1"/><ellipse cx="30.4" cy="17.4" rx="1.6" ry="1.9"/><path d="M18 22c-6 0-8.6 5-7.6 11 .7 4.2 3.1 6.5 3.1 9.4 0 2.7-2 4.2-1.7 6.8.3 2.4 2.7 3.8 5.7 3.8 3.4 0 5.8-1.6 5.8-4.6 0-3.4-2.4-5-1.2-9.6 1.1-4.4 4.6-6.6 3.7-11.4C25.2 24.4 22 22 18 22z"/></g></svg>`;
+}
+function dots(p){
+  const parts = String(p).split("+").map(x => parseInt(x, 10)).filter(n => n > 0 && n < 12);
+  return `<span class="pill tone" title="${h(p)} pisadas"><span class="dots">${parts.map(n => "<i></i>".repeat(n)).join("<em>+</em>")}</span>${h(p)} pisadas</span>`;
+}
+const INFO = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>';
+
+function key(d, g, p){ return d.id + ":" + g + ":" + p.nome }
+function stepList(d, g, ps){
+  return `<div class="card">${ps.map((p, i) => { const k = key(d, g, p); return `<label class="step${K[k] ? " done" : ""}"><input type="checkbox" class="ck" data-k="${h(k)}" ${K[k] ? "checked" : ""} aria-label="Sei o passo ${h(p.nome)}"><div style="min-width:0">
+    <div class="head"><span class="name">${h(p.nome)}</span>${p.pis ? dots(p.pis) : ""}${p.pend ? `<span class="pill warn">${h(p.pend)}</span>` : ""}</div>
+    <p class="desc">${h(p.desc)}</p>
+    ${p.vars ? `<ul class="vars">${p.vars.map(v => (v.startsWith("Saída: ") ? `<li><b>Saída:</b> ${h(v.slice(7))}</li>` : `<li><b>Variação:</b> ${h(v)}</li>`)).join("")}</ul>` : ""}
+  </div></label>` }).join("")}</div>`;
+}
+function comboList(l){
+  return `<div class="card">${l.map((c, i) => `<div class="combo"><span class="num">${i + 1}</span><div class="seq">${c.map(s => `<span class="c">${h(s)}</span>`).join('<span class="arr">→</span>')}</div></div>`).join("")}</div>`;
+}
+
+function render(id){
+  const d = DATA.find(x => x.id === id) || DATA[0];
+  document.body.className = "t-" + d.tema;
+  $("#av").innerHTML = tag(d.fam, 22);
+  $("#seg").innerHTML = DATA.map(x => `<button data-id="${x.id}" aria-pressed="${x.id === d.id}">${tag(x.fam, 15)}<span>${h(x.nome)}</span></button>`).join("");
+  const all = [...d.fechados.map((p,i)=>key(d,"f",p)), ...d.abertos.map((p,i)=>key(d,"a",p))];
+  const tot = all.length, sei = all.filter(k => K[k]).length, pct = tot ? Math.round(sei / tot * 100) : 0;
+  const nCombos = d.combos.reduce((a, g) => a + g.lista.length, 0);
+  const e = d.exame;
+  $("#main").innerHTML = `
+  <section class="hero toned">
+    <div style="min-width:0"><span class="pill">${tag(d.fam, 12)} Colar${d.sub ? " · " + h(d.sub) : ""}</span><h1>${h(d.nome)}</h1><p class="word">${h(d.palavra)}</p>
+      <div class="prog"><div class="meter"><i style="width:${pct}%"></i></div><span><b>${sei}</b> de ${tot} passos que sei</span></div></div>
+    <img class="photo" src="img/${d.id}.jpg" alt="Colar ${h(d.nome)}" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'photo fallback',innerHTML:''}))">
+  </section>
+
+  <section class="sec" id="fechados"><header><h2>Passos fechados</h2><span class="src">ou iniciados no fechado</span></header>${stepList(d, "f", d.fechados)}</section>
+  <section class="sec" id="abertos"><header><h2>Passos abertos</h2><span class="src">ou iniciados no aberto</span></header>${stepList(d, "a", d.abertos)}</section>
+  ${d.obs.length ? `<section class="sec"><div class="sub">Observações da roda</div><div class="obs">${d.obs.map(o => `<div>${INFO}<span>${h(o)}</span></div>`).join("")}</div></section>` : ""}
+
+  <section class="sec" id="combos"><header><h2>Combinações</h2><span class="src">ensinadas na roda</span></header>
+    ${nCombos ? d.combos.map(g => `${g.grupo ? `<div class="sub">${h(g.grupo)}</div>` : ""}${comboList(g.lista)}`).join("") : `<div class="empty">Ainda não há combinações registradas para este colar.</div>`}
+  </section>
+
+  <section class="sec" id="exame"><header><h2>No exame</h2><span class="src">Manual do Aluno · 28/08/2026</span></header>
+    <div class="exhead toned"><div class="route">${tag(d.fam, 18)} ${h(d.nome)} <span aria-hidden="true">→</span> ${h(e.para)}</div>
+      <div class="meta"><div><span>Quando</span>${h(e.freq)}</div><div><span>Tempo mínimo</span>${h(e.tempo)}</div></div></div>
+    ${e.avisos.map(a => `<div class="note">${INFO}<span><b>Importante:</b> ${h(a)}</span></div>`).join("")}
+    ${e.grupos.map(g => `${e.grupos.length > 1 ? `<div class="sub">${h(g.nome)}</div>` : ""}<div class="card">${g.itens.map(it => `<div class="crit"><span class="bul"></span><div>${it.nome ? `<b>${h(it.nome)}</b>` : ""}${it.descricao ? `<p>${h(it.descricao)}</p>` : ""}</div></div>`).join("")}</div>`).join("")}
+  </section>
+  <footer>Passos e combinações do material das rodas. Critérios de exame do Manual do Aluno.</footer>`;
+}
+
+let K = {};
+try { K = JSON.parse(localStorage.getItem("pd2-sei") || "{}") || {} } catch (e) { K = {} }
+let db = null, myId = null, wT = null, busy = false, dirty = false;
+function persist(){
+  try { localStorage.setItem("pd2-sei", JSON.stringify(K)) } catch (e) {}
+  if (!db || !myId) return;
+  dirty = true; clearTimeout(wT); wT = setTimeout(flush, 600);
+}
+async function flush(){
+  if (busy) { wT = setTimeout(flush, 400); return }
+  if (!dirty) return; dirty = false; busy = true;
+  try { await db.doc("data/users/" + myId + "/sei").set({ passos: K }) } catch (e) { db = null }
+  busy = false;
+}
+let cur = (location.hash || "").slice(1);
+if (!DATA.some(d => d.id === cur)) { try { cur = localStorage.getItem("pd2-colar") || "transparente" } catch (e) { cur = "transparente" } }
+render(cur);
+document.addEventListener("change", ev => {
+  const c = ev.target.closest(".ck"); if (!c) return;
+  K = Object.assign({}, K); if (c.checked) K[c.dataset.k] = true; else delete K[c.dataset.k];
+  persist(); const y = scrollY; render(cur); scrollTo(0, y);
+});
+(async () => {
+  const C = window.claude; if (!C || !C.use) return;
+  const [d, u] = await Promise.all([C.use("db"), C.use("user")]);
+  if (!d || !u) return; const id = await u.id(); if (!id) return;
+  db = d; myId = id;
+  try {
+    const s = await db.doc("data/users/" + id + "/sei").get();
+    if (s.exists) { const remote = (s.data() || {}).passos || {}; K = Object.assign({}, remote, K); try { localStorage.setItem("pd2-sei", JSON.stringify(K)) } catch (e) {} if (Object.keys(K).length !== Object.keys(remote).length) persist(); const y = scrollY; render(cur); scrollTo(0, y) }
+    else if (Object.keys(K).length) persist();
+  } catch (e) { db = null }
+})();
+document.addEventListener("click", ev => {
+  const b = ev.target.closest("[data-id]");
+  if (b) { cur = b.dataset.id; try { localStorage.setItem("pd2-colar", cur) } catch (e) {} render(cur); window.scrollTo({ top: 0 }); return }
+  const j = ev.target.closest("[data-jump]");
+  if (j) { const el = document.getElementById(j.dataset.jump); if (el) el.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }) }
+});
+</script>
+
+</body>
+</html>
